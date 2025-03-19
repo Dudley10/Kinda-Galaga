@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Invaders : MonoBehaviour
 {
-    public Invader[] prefabs;
+    public Invader[] prefabs = new Invader[5];
     public int rows = 5;
     public int columns = 11;
     public AnimationCurve speed;
@@ -23,7 +24,7 @@ public class Invaders : MonoBehaviour
             Vector3 rowPosition = new Vector3(centering.x, centering.y + (row * 2.0f), 0.0f);
             for (int col = 0; col < this.columns; col ++)
             {
-                Invader invader = Instantiate(this.prefabs[rows], this.transform);
+                Invader invader = Instantiate(this.prefabs[row], this.transform);
                 invader.killed += InvaderKilled;
                 Vector3 position = rowPosition;
                 position.x += col * 2.0f;
@@ -66,6 +67,10 @@ public class Invaders : MonoBehaviour
     }
     private void InvaderKilled(){
         this.amountKilled++;
+//you win
+        //if(this.amountKilled > this.totalInvaders){
+
+        //}
     }
     private void MissileAttack(){
         foreach (Transform invader in this.transform){
