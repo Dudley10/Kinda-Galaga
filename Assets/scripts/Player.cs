@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     }
     private void Shoot(){
         if (!_laserActive) {
+            AudioSource audioSource = GetComponentInChildren<AudioSource>();
+            audioSource.Play();
         Projectile projectile = Instantiate(this.laserPrefab, this.transform.position, Quaternion.identity);
         projectile.destroyed += LaserDestroyed;
         _laserActive = true;
@@ -42,7 +44,8 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.layer == LayerMask.NameToLayer("Invader") ||
         other.gameObject.layer == LayerMask.NameToLayer("Missile")) {
-            //load win scene
+            //load lose scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Lose");
         }
     }
 }

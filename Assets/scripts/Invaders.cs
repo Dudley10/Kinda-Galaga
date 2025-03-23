@@ -14,6 +14,7 @@ public class Invaders : MonoBehaviour
     public float missileAttackRate = 1.0f;
     public int amountAlive => this.totalInvaders - this.amountKilled;
     public Projectile missilePrefab;
+   
 
     private void Awake(){
         for (int row = 0; row < this.rows; row++)
@@ -36,6 +37,7 @@ public class Invaders : MonoBehaviour
     void Start()
     {
         InvokeRepeating(nameof(MissileAttack), this.missileAttackRate, this.missileAttackRate);
+        
     }
 
     // Update is called once per frame
@@ -67,10 +69,10 @@ public class Invaders : MonoBehaviour
     }
     private void InvaderKilled(){
         this.amountKilled++;
-//you win
-        //if(this.amountKilled > this.totalInvaders){
-
-        //}
+//you win that currently doesn't work
+        if(this.amountKilled >= this.totalInvaders){
+         UnityEngine.SceneManagement.SceneManager.LoadScene("Win");
+        }
     }
     private void MissileAttack(){
         foreach (Transform invader in this.transform){
@@ -83,5 +85,4 @@ public class Invaders : MonoBehaviour
             }
         }
     }
-
 }
