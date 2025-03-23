@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6031878142813487829, guid: 25e5ba37f2e8243a0a67470c8e0ceb82, type: 3}
+      propertyPath: 'animationSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8125546038441520533, guid: 55048ab17befc40808dab116de43cbae, type: 3}
+    - target: {fileID: -6031878142813487829, guid: 25e5ba37f2e8243a0a67470c8e0ceb82, type: 3}
+      propertyPath: 'animationSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -4489872930652851636, guid: 112c91e7612c146939bd9fba6b71eeb9, type: 3}
     - target: {fileID: 281972590154149206, guid: 25e5ba37f2e8243a0a67470c8e0ceb82, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -58,7 +66,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2734124139772912862, guid: 25e5ba37f2e8243a0a67470c8e0ceb82, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734124139772912862, guid: 25e5ba37f2e8243a0a67470c8e0ceb82, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4492377277868503316, guid: 25e5ba37f2e8243a0a67470c8e0ceb82, type: 3}
       propertyPath: m_Name
@@ -67,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 6315493204983612330, guid: 25e5ba37f2e8243a0a67470c8e0ceb82, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -628185973678321511, guid: 9269a76cca7b743889330fa5611bf13f, type: 3}
+      objectReference: {fileID: 8125546038441520533, guid: 55048ab17befc40808dab116de43cbae, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -88,7 +100,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8895050863327501212}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85195231c16724580b9e684dce6f9962, type: 3}
   m_Name: 
