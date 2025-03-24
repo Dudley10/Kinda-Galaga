@@ -85,4 +85,10 @@ public class Invaders : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D invader){
+        if (invader.gameObject.layer == LayerMask.NameToLayer("Border")) {
+            //load lose scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Lose");
+        }
+    }
 }

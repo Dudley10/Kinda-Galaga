@@ -43,7 +43,8 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.layer == LayerMask.NameToLayer("Invader") ||
-        other.gameObject.layer == LayerMask.NameToLayer("Missile")) {
+        other.gameObject.layer == LayerMask.NameToLayer("Missile") ||
+        other.gameObject.layer == LayerMask.NameToLayer("Border")) {
             //load lose scene
             UnityEngine.SceneManagement.SceneManager.LoadScene("Lose");
         }
