@@ -31,7 +31,15 @@ public class Invader : MonoBehaviour
             this.killed.Invoke();
             this.gameObject.SetActive(false);
         }
+        Softlock(other);
     }
+
+     private void Softlock(Collider2D invader){
+        if (invader.gameObject.layer == LayerMask.NameToLayer("Border")) {
+            //load lose scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Lose");
+        }
+     }
 
     // Update is called once per frame
     void Update()
