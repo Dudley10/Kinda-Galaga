@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      invader 01-1 color_0: 6593140213865959946
+      invader 01-1 color_1: -8354428638888626972
+      invader 01-1 color_2: 4205106236568218659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
